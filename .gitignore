@@ -1,0 +1,11 @@
+# Python Virtual Environments
+.venv/
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# requirements files
+requirements.txt
