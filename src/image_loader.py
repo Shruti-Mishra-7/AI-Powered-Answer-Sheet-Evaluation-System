@@ -1,6 +1,6 @@
 import cv2
 
-img = cv2.imread("data/diag.png")
+img = cv2.imread("data/answer_sheet.png")
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 binary = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 21, 15)
