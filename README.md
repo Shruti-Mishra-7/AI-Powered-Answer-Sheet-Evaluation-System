@@ -43,6 +43,5 @@ In Progress:
 Planned:
 
 * OCR integration
-* Handwriting recognition
 * Semantic answer evaluation
 * Automated grading and feedback
