@@ -8,7 +8,7 @@ img = cv2.imread(
 # DAY 4.2 - DILATION
 kernel = cv2.getStructuringElement(
     cv2.MORPH_RECT,
-    (7,7)
+    (5,5)
 )
 
 dilated = cv2.dilate(
