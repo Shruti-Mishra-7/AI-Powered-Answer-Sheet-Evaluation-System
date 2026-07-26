@@ -6,42 +6,67 @@ Traditional answer evaluation is time-consuming, difficult to scale, and prone t
 
 ## Current Pipeline
 
+```
 Scanned Answer Sheet
-↓
-Image Preprocessing
-↓
-Noise Removal
-↓
-Document Structure Analysis
-↓
-OCR
-↓
-Text Extraction
-↓
+        │
+        ▼
+Image Preprocessing (Computer Vision)
+        │
+        ▼
+OCR (PaddleOCR)
+        │
+        ▼
+OCR Cache *(In Progress)*
+        │
+        ▼
+Raw Text Storage
+        │
+        ▼
+Text Cleaning
+        │
+        ▼
+Question Segmentation
+        │
+        ▼
+Structured JSON
+        │
+        ▼
 Semantic Evaluation
-↓
+        │
+        ▼
 Marks & Feedback Generation
+```
 
 ## Current Status
 
-Implemented:
+### ✅ Completed
 
-* Image loading using OpenCV
-* Grayscale conversion
-* Adaptive Gaussian Thresholding
-* Noise removal using contour filtering
-* Contour detection
-* Bounding box generation
-* Dilation-based text grouping
+- Image loading using OpenCV
+- Grayscale conversion
+- Adaptive Gaussian Thresholding
+- Noise removal using contour filtering
+- Contour detection
+- Bounding box generation
+- Dilation-based text grouping
+- PaddleOCR integration
+- Handwritten text extraction from scanned answer sheets
+- Python 3.11 environment setup and compatibility fixes
+- OCR tested successfully on multiple handwritten answer sheets
 
-In Progress:
+### 🚧 In Progress
 
-* Text line detection
-* ROI extraction
-* Question-answer segmentation
+- Modular OCR module (`ocr.py`)
+- OCR caching using image hashing
+- Metadata management (`metadata.json`)
+- Raw OCR text storage
+- Text cleaning and normalization
 
-Planned:
+### 📅 Planned
 
-* OCR integration
-* Semantic answer evaluation
-* Automated grading and feedback
+- Question-answer segmentation
+- Structured JSON generation
+- Embedding generation
+- Semantic similarity evaluation
+- Automated mark allocation
+- Feedback generation
+- Web interface/API integration
